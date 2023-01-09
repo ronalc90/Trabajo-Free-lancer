@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9QLp5y0WLorunzaDahGKNJ1d1dDfZ2Sm6gCjsKSOF2qjtcvpLugkPumwyq+P/4oDt5CZnVhdYtOPx14rA9zKSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ronit\\Documents\\GitHub\\Trabajo-Free-lancer\\Clientes\\Aldo Rivera\\Ejercicio5\\AldoRivera\\AldoRivera.vcxproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ronit\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.27\\microsoft.windows.sdk.net.ref.10.0.19041.27.nupkg.sha512"
+  ],
+  "logs": []
+}

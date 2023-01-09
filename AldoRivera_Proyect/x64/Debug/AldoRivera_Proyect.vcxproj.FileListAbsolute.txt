@@ -1,0 +1,5 @@
+C:\Users\ronit\Documents\GitHub\Trabajo-Free-lancer\Clientes\Aldo Rivera\Ejercicio5\AldoRivera_Proyect\x64\Debug\AldoRivera_Proyect.vcxproj.AssemblyReference.cache
+C:\Users\ronit\Documents\GitHub\Trabajo-Free-lancer\Clientes\Aldo Rivera\Ejercicio5\AldoRivera_Proyect\x64\Debug\AldoRivera_Proyect.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\ronit\Documents\GitHub\Trabajo-Free-lancer\Clientes\Aldo Rivera\Ejercicio5\AldoRivera_Proyect\x64\Debug\AldoRivera_Proyect.exe
+C:\Users\ronit\Documents\GitHub\Trabajo-Free-lancer\Clientes\Aldo Rivera\Ejercicio5\AldoRivera_Proyect\x64\Debug\AldoRivera_Proyect.Form1.resources
+C:\Users\ronit\Documents\GitHub\Trabajo-Free-lancer\Clientes\Aldo Rivera\Ejercicio5\AldoRivera_Proyect\x64\Debug\AldoRivera_Proyect.vcxproj.GenerateResource.cache
