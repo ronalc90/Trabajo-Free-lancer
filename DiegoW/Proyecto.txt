@@ -1,0 +1,96 @@
+La institución bancaria “Dineros de Chile”, necesita disponer de una aplicación que le permita registrar las cuentas bancarias que han sido abiertas y los datos asociados a esta. A usted se le solicita la construcción de
+una Solución en Visual Studio .Net que permita cubrir los siguientes requerimientos:
+
+Registro de Cuenta Bancaria
+
+Se debe permitir el registro de la Cuenta Bancaria abierta, cada cuenta tiene los siguientes datos:
+Tipo de Cuenta: Los valores posibles son Cuenta Corriente y Ahorro.
+Identificador de la Cuenta: Corresponde a un código de la forma CTA-CCC-99999 que es generado de manera automática, donde:
+CTA: Prefijo para todas las cuentas.
+CCC: Son 3 caracteres que se obtienen en base al tipo de cuenta, los posibles valores son: CTE y AHO.
+99999: Correlativo para cada tipo de póliza de manera individual relleno con ceros a la izquierda, ejemplo “00001”
+Titular: Información del titular
+
+
+Titular
+Corresponde a la persona o empresa que es titular de la cuenta y los datos requeridos son:
+Tipo: Se debe indicar si se trata de una persona Natural o Empresa.
+Nombre Completo: Considera el nombre y Apellido, para personas naturales. Razón social si se trata de una empresa.
+
+
+Datos por Tipo de Cuenta
+
+Cada tipo de cuenta necesita sus propios datos, que no son comunes en todas las cuentas. Los datos requeridos por cada tipo son:
+
+Cuenta Corriente:
+Monto Sobregiro: Corresponde al monto de sobregiro permitido, se expresa en UF y debe ser mayor que cero.
+Tipo de Seguro: Corresponde al tipo de seguro por fraude, los posibles valores son: Sin Seguro, 1000UF, 2000UF o 3000UF.
+
+Ahorro:
+Mínimo Ahorro: Corresponde al monto mínimo de ahorro que debe tener la cuenta, se expresa en UF y debe ser mayor a cero.
+Tipo de Giro: Indica la modalidad de giros permitidos: Anual, Semestral o Mensual.
+
+Contrato de Servicio
+
+Toda cuenta considera un contrato de servicio que determina el valor de mantención anual y una comisión al momento de registrarse un giro, para ello deberá considerar lo siguiente en su cálculo:
+
+Cálculo del Valor de Mantención:
+
+Cuenta Corriente: El valor base es de 0.2UF. El recargo será un valor adicional en base a la siguiente tabla:
+
+Concepto | Rango | Recargo
+
+Monto Sobregiro | 0 a 10UF | 0.1 UF
+Monto Sobregiro | Más de 10 UF hasta 100 UF | 0.2 UF
+Monto Sobregiro | Más de 100 UF | 0.3 UF
+
+Tipo de Seguro | Sin Seguro | 0.0 UF
+Tipo de Seguro | 1000 UF | 0.4 UF
+Tipo de Seguro | 2000 UF | 0.5 UF
+Tipo de Seguro | 3000 UF | 0.6 UF
+
+ 
+
+Ahorro: El valor base es de 0.1 UF. El recargo será un valor adicional en base a la siguiente tabla:
+Concepto | Rango | Recargo
+
+Antigúedad  | O a 1 año | 0.5 UF
+Antigúedad  | Más de 1 años hasta 5 | 0.3 UF
+Antigúedad  | Más de 5 años | 0.2 UF
+
+Tipo de Giro | Anual | 0.1 UF
+Tipo de Giro | Semestral | 0.2 UF
+Tipo de Giro | Mensual | 0.4 UF
+
+ Calculo de Comisión por Giro:
+
+Comisión Base: Corresponde a un valor base de 0.01 UF.
+Comisión por Tipo de Seguro: Corresponde a un valor adicional en base a la siguiente tabla por tipo de cuenta.
+
+Tipo | Adicional Indemnización
+Cuenta Corriente | (0.01% del valor del Giro) - (0.02% de la Comisión Mensual)
+Ahorro | (0.01% del valor del Giro) — (0.03% de la Comisión Mensual)
+
+ 
+
+
+Al momento de informar un giro se debe ingresar el monto del mismo en UF. Se debe considerar que la comisión debe ser un valor positivo, si es negativa la comisión será cero.
+
+Actividad: crear los proyectos para las estructuras de datos requeridas y programar el formulario WPF para que realice las siguientes tareas:
+
+1. Permitir el ingreso de los datos de cabecera de una Cuenta y el Titular asociado.
+2. Permitir ingresar el detalle de cada cuenta acorde al tipo indicado por el usuario (Cuenta Corriente y Ahorro)
+3. Debe desplegar un campo con el valor de la Comisión en base a los datos que se ingresan.
+4. Debe agregar cada cuenta a una colección en memoria. Al momento de agregarla deberá informar en un mensaje el identificador de la Cuenta y mostrar los datos generales de la cuenta en un Grid de Datos al pie
+del formulario.
+5. Al seleccionar una cuenta en el Grid de Datos, se deberá desplegar el detalle de los datos en base al tipo de cuenta en otro Grid de Datos.
+6. Debe permitir la simulación de un giro. Para esto es necesario ingresar el identificador de la cuenta (validar que existe) y el monto del giro en UF. Un botón informara el monto de la comisión respectiva.
+7. Botones para efectos estadísticos permitirán consultar:
+
+a. El promedio de las comisiones a cobrar de manera mensual.
+
+b. Numero de cuentas por cada tipo.
+
+c. Identificador de la(s) cuenta(s) con mayor valor de comisión anual.
+
+El formulario xaml propuesto es el siguiente:
